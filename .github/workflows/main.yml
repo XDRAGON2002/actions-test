@@ -6,7 +6,11 @@ jobs:
     name: Setup tool
     steps:
       - name: Step 1
+        id: first
         uses: "XDRAGON2002/sample-github-action@v1.0"
-
+      
       - name: Step 2
+        run: echo "pos is ${{ steps.first.outputs.pos }}"
+
+      - name: Step 3
         run: cve-bin-tool --help
