@@ -1,0 +1,12 @@
+on: [push]
+
+jobs:
+  sample_job:
+    runs-on: ubuntu-latest
+    name: Setup tool
+    steps:
+      - name: Step 1
+        uses: "XDRAGON2002/sample-github-action@v1.0"
+
+      - name: Step 2
+        run: cve-bin-tool --help
